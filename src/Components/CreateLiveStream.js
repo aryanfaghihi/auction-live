@@ -23,8 +23,17 @@ const CreateLiveStream = () => (
             floatingLabelText="What do you want to sell?"
             style={{width: 400, fontSize: 20, height: 80}}
         />
+        <div style={containerStyle}>
+            <TextField
+                hintText="$ "
+
+                floatingLabelText="How much would you like to sell it for?"
+                style={{width: 400, fontSize: 20, height: 80}}
+            />
+        </div>
         <RaisedButton label="Go live" onClick={handleNewAuction} primary={true} style={buttonStyle}/>
     </div>
+
 );
 
 export default CreateLiveStream;

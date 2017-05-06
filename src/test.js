@@ -77,7 +77,7 @@ const Example = () => (
         >
           <div>          
           <ModalBox />
-          <img src={tile.img} style={imgStyle} />
+          <img src={tile.img} style={imgStyle} alt="None"/>
           </div>
         </GridTile>
       ))}
