@@ -68,7 +68,7 @@ function captureUserMedia(isBroadcaster, callback) {
         var video = document.getElementById('videoEl');
         video.setAttribute('autoplay', true);
         video.setAttribute('controls', true);
-        participants.insertBefore(video, participants.firstChild);
+        // participants.insertBefore(video, participants.firstChild);
         getUserMedia({
             video: video,
             onsuccess: function (stream) {

@@ -11,6 +11,11 @@ const buttonStyle = {
     margin: 12
 };
 
+const handleNewAuction = () => {
+    window.createButtonClickHandler();
+};
+
+
 const CreateLiveStream = () => (
     <div style={containerStyle}>
         <TextField
@@ -18,7 +23,7 @@ const CreateLiveStream = () => (
             floatingLabelText="What do you want to sell?"
             style={{width: 400, fontSize: 20, height: 80}}
         />
-        <RaisedButton label="Go live" primary={true} style={buttonStyle} />
+        <RaisedButton label="Go live" onClick={handleNewAuction} primary={true} style={buttonStyle}/>
     </div>
 );
 

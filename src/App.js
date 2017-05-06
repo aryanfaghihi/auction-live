@@ -1,7 +1,8 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import Example from './test';
 import CreateLiveStream from './Components/CreateLiveStream';
+import LiveStreamViewer from './Components/LiveStreamViewer';
+
 
 var title = "Auction Live";
 
@@ -14,7 +15,7 @@ const App = () => (
         />
 
         <CreateLiveStream />
-        <Example />
+        <LiveStreamViewer/>
     </div>
 );
 

@@ -53,7 +53,6 @@ export default class ModalBox extends React.Component {
           modal={true}
           open={this.state.open}
         >
-          <button id="start-conferencing" onClick={this.handleNewAuction}>Create live auction</button>
           <video id="videoEl" autoPlay={true} style={video_style}></video>
         </Dialog>
       </div>
