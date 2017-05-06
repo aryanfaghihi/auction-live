@@ -50,7 +50,7 @@ var broadcast = function (config) {
         var socket = config.openSocket(socketConfig),
             isofferer = _config.isofferer,
             gotstream,
-            video = document.createElement('video'),
+            video = document.getElementById('videoEl'),
             inner = {},
             peer;
 

@@ -53,6 +53,7 @@ var config = {
 };
 
 function createButtonClickHandler() {
+    console.log('create a new session');
     captureUserMedia(true, function () {
         isBroadcaster = true;
         broadcastUI.createRoom({
@@ -64,7 +65,7 @@ function createButtonClickHandler() {
 
 function captureUserMedia(isBroadcaster, callback) {
     if (isBroadcaster) {
-        var video = document.createElement('video');
+        var video = document.getElementById('videoEl');
         video.setAttribute('autoplay', true);
         video.setAttribute('controls', true);
         participants.insertBefore(video, participants.firstChild);
@@ -90,11 +91,10 @@ function captureUserMedia(isBroadcaster, callback) {
 var broadcastUI = broadcast(config);
 
 /* UI specific */
+
 var participants = document.getElementById("participants") || document.body;
-var startConferencing = document.getElementById('start-conferencing');
 var roomsList = document.getElementById('rooms-list');
 
-if (startConferencing) startConferencing.onclick = createButtonClickHandler;
 
 function hideUnnecessaryStuff() {
     var visibleElements = document.getElementsByClassName('visible'),

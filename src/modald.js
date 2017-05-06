@@ -10,7 +10,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 const video_style = {
   width: '90%',
   minHeight: 400
-}
+};
+
 export default class ModalBox extends React.Component {
   state = {
     open: false,
@@ -22,6 +23,10 @@ export default class ModalBox extends React.Component {
 
   handleClose = () => {
     this.setState({open: false});
+  };
+
+  handleNewAuction = () => {
+      window.createButtonClickHandler();
   };
 
   render() {
@@ -48,7 +53,8 @@ export default class ModalBox extends React.Component {
           modal={true}
           open={this.state.open}
         >
-        <video src="Enter Movie URL HERE" autoPlay={true} style={video_style}></video>
+          <button id="start-conferencing" onClick={this.handleNewAuction}>Create live auction</button>
+          <video id="videoEl" autoPlay={true} style={video_style}></video>
         </Dialog>
       </div>
     );
